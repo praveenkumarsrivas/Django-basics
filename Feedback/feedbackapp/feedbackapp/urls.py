@@ -19,5 +19,5 @@ from feedapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),
-    path('feedback/', views.feedback)
+    path('feedback/', views.feedback),
 ]

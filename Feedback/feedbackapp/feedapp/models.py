@@ -9,5 +9,6 @@ class Feedback(models.Model):
     suggestion= models.TextField()
     best=models.TextField()
     worst = models.TextField()
+    date = models.DateTimeField()
     def __str__(self):
         return self.name

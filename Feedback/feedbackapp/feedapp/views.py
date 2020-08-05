@@ -17,7 +17,7 @@ def feedback(request):
         suggestion=request.POST.get('suggestion')
         best=request.POST.get('best')
         worst = request.POST.get('worst')
-        if len(name) < 2 or len(number) < 10 or len(email) < 5 or (rate < 1 and rate > 5):
+        if len(name) < 2 or len(number) < 10 or len(email) < 5:
             message.warning(request, 'Invalid Entries')
         else:
             connect = Feedback(name=name, email=email, rate=rate, suggestion=suggestion, best=best, worst=worst, date=datetime.now())
